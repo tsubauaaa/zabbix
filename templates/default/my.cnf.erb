@@ -4,8 +4,8 @@ socket=/var/lib/mysql/mysql.sock
 user=mysql
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
-default-character-set=<%= node['zabbix']['mysql']['default_charset_set'] %>
-
+<%= default-character-set= node['zabbix']['mysql']['default_charset_set'] if node['platform'] == 'centos' %>
+<%= character-set-server= node['zabbix']['mysql']['character_set_server'] if node['platform'] == 'amazon' %>
 [mysqld_safe]
 log-error=/var/log/mysqld.log
 pid-file=/var/run/mysqld/mysqld.pid
