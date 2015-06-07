@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+include_recipe 'zabbix::iptables'
 include_recipe 'zabbix::mysql'
 include_recipe 'zabbix::php'
 

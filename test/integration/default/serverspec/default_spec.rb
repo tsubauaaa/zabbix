@@ -29,12 +29,26 @@ end
 describe file("/etc/php.ini") do
   it { should be_file }
   its(:content) { should match /Asia\/Tokyo/ }
+  its(:content) { should match /\"UTF-8\"/ }
+end
+
+describe file("/etc/my.cnf") do
+  it { should be_file }
+  its(:content) { should match /utf8/ }
 end
 
 describe port(80) do
   it { should be_listening }
 end
 
+describe port(3306) do
+  it { should be_listening }
+end
+
 describe port(10050) do
+  it { should be_listening }
+end
+
+describe port(10051) do
   it { should be_listening }
 end
