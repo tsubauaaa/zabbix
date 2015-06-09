@@ -41,7 +41,6 @@ execute "create_schema_images_data" do
     mysql -uroot -p"#{node['zabbix']['mysql']['root_password']}" "#{node['zabbix']['mysql']['db_name']}" < /usr/share/doc/zabbix-server-mysql-2.4.5/create/schema.sql
     mysql -uroot -p"#{node['zabbix']['mysql']['root_password']}" "#{node['zabbix']['mysql']['db_name']}" < /usr/share/doc/zabbix-server-mysql-2.4.5/create/images.sql
     mysql -uroot -p"#{node['zabbix']['mysql']['root_password']}" "#{node['zabbix']['mysql']['db_name']}" < /usr/share/doc/zabbix-server-mysql-2.4.5/create/data.sql
-
   EOH
   action :run
   only_if "mysql -u root -p#{node['zabbix']['mysql']['root_password']} -D #{node['zabbix']['mysql']['db_name']}"
