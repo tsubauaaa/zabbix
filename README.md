@@ -19,10 +19,14 @@ TODO: List your cookbook attributes here.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['zabbix']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['zabbix']['packages']</tt></td>
+    <td>Array</td>
+    <td>zabbix packages</td>
+    <td><tt>%w{zabbix-server-mysql zabbix-web-mysql zabbix-web-japanese zabbix-agent}</tt></td>
+    <td><tt>['zabbix']['services']</tt></td>
+    <td>Array</td>
+    <td>zabbix services</td>
+    <td><tt>%w{zabbix-server zabbix-agent httpd}</tt></td>
   </tr>
 </table>
 
@@ -51,6 +55,4 @@ Contributing
 
 License and Authors
 -------------------
-Tsubasa Hirota  tsubasa11@marble.ocn.ne.jp
-Released under the same terms as Sensu (the MIT license); see     LICENSE
-for details.
+Distributed under the [MIT License][mit].
