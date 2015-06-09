@@ -33,7 +33,7 @@ TODO: List your cookbook attributes here.
   <tr>
     <td><tt>['zabbix']['db_password']</tt></td>
     <td>String</td>
-    <td>Password zabbix DB in mysql</td>
+    <td>password zabbix DB in mysql</td>
     <td><tt>zabbix</tt></td>
   </tr>
   <tr>
