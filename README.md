@@ -1,23 +1,15 @@
 zabbix Cookbook
 ===============
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+zabbix-server,agent install
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - zabbix needs toaster to brown your bagel.
+platforms:amazon,centos6.5~
 
 Attributes
 ----------
 TODO: List your cookbook attributes here.
 
-e.g.
 #### zabbix::default
 <table>
   <tr>
@@ -37,25 +29,19 @@ e.g.
 Usage
 -----
 #### zabbix::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `zabbix` in your node's `run_list`:
+Just include `zabbix::default` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[zabbix]"
+    "recipe[zabbix::default]"
   ]
 }
 ```
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
@@ -65,4 +51,6 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Tsubasa Hirota  tsubasa11@marble.ocn.ne.jp
+Released under the same terms as Sensu (the MIT license); see     LICENSE
+for details.
