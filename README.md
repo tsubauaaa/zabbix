@@ -23,6 +23,8 @@ TODO: List your cookbook attributes here.
     <td>Array</td>
     <td>zabbix packages</td>
     <td><tt>%w{zabbix-server-mysql zabbix-web-mysql zabbix-web-japanese zabbix-agent}</tt></td>
+  </tr>
+  <tr>
     <td><tt>['zabbix']['services']</tt></td>
     <td>Array</td>
     <td>zabbix services</td>
