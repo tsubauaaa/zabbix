@@ -30,6 +30,42 @@ TODO: List your cookbook attributes here.
     <td>zabbix services</td>
     <td><tt>%w{zabbix-server zabbix-agent httpd}</tt></td>
   </tr>
+  <tr>
+    <td><tt>['zabbix']['db_password']</tt></td>
+    <td>String</td>
+    <td>Password zabbix DB in mysql</td>
+    <td><tt>zabbix</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zabbix']['db_name']</tt></td>
+    <td>String</td>
+    <td>mysql DB for zabbix</td>
+    <td><tt>zabbix</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zabbix']['version']</tt></td>
+    <td>String</td>
+    <td>version for zabbix</td>
+    <td><tt>zabbix</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zabbix']['agent']['server']</tt></td>
+    <td>String</td>
+    <td>zabbix server</td>
+    <td><tt>localhost</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zabbix']['agent']['hostnameitem']</tt></td>
+    <td>String</td>
+    <td>HostnameItem in agent config</td>
+    <td><tt>system.hostname</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['zabbix']['agent']['HostMetadata']</tt></td>
+    <td>String</td>
+    <td>HostMetadata in agent config</td>
+    <td><tt>tsubauaaa</tt></td>
+  </tr>
 </table>
 
 Usage
