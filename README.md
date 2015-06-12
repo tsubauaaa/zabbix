@@ -31,18 +31,6 @@ TODO: List your cookbook attributes here.
     <td><tt>%w{zabbix-server zabbix-agent httpd}</tt></td>
   </tr>
   <tr>
-    <td><tt>['zabbix']['db_password']</tt></td>
-    <td>String</td>
-    <td>password zabbix DB in mysql</td>
-    <td><tt>zabbix</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['zabbix']['db_name']</tt></td>
-    <td>String</td>
-    <td>mysql DB for zabbix</td>
-    <td><tt>zabbix</tt></td>
-  </tr>
-  <tr>
     <td><tt>['zabbix']['version']</tt></td>
     <td>String</td>
     <td>version for zabbix</td>
