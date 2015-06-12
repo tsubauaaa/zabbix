@@ -22,22 +22,22 @@ node['zabbix']['packages'].each do |pkg|
   package pkg do
     action :install
     version "#{node['zabbix']['version']}.el6"
-    options "--enablerepo=zabbix"
+    options '--enablerepo=zabbix'
   end
 end
 
-template "/etc/zabbix/zabbix_agentd.conf" do
-  source "zabbix_agentd.conf.erb"
-  owner "root"
-  group "root"
-  mode "0644"
+template '/etc/zabbix/zabbix_agentd.conf' do
+  source 'zabbix_agentd.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
 end
 
-template "/etc/zabbix/zabbix_server.conf" do
-  source "zabbix_server.conf.erb"
-  owner "root"
-  group "zabbix"
-  mode "0640"
+template '/etc/zabbix/zabbix_server.conf' do
+  source 'zabbix_server.conf.erb'
+  owner 'root'
+  group 'zabbix'
+  mode '0640'
 end
 
 node['zabbix']['services'].each do |svc|

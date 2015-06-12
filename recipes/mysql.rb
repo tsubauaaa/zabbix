@@ -14,21 +14,21 @@ end
 
 case node['platform']
 when 'centos'
-  template "/etc/my.cnf" do
-    source "my.cnf_5.1.erb"
-    owner "root"
-    group "root"
-    mode "0644"
+  template '/etc/my.cnf' do
+    source 'my.cnf_5.1.erb'
+    owner 'root'
+    group 'root'
+    mode '0644'
   end
 when 'amazon'
-  template "/etc/my.cnf" do
-    source "my.cnf_5.5.erb"
-    owner "root"
-    group "root"
-    mode "0644"
+  template '/etc/my.cnf' do
+    source 'my.cnf_5.5.erb'
+    owner 'root'
+    group 'root'
+    mode '0644'
   end
 end
 
-service "mysqld" do
+service 'mysqld' do
   action [ :enable, :start ]
 end

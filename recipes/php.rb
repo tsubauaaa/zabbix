@@ -10,9 +10,9 @@ package 'php' do
   action :install
 end
 
-template "/etc/php.ini" do
-  source "php.ini.erb"
-  owner "root"
-  group "root"
-  mode "0644"
+template '/etc/php.ini' do
+  source 'php.ini.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
 end
