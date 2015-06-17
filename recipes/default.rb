@@ -40,10 +40,10 @@ template '/etc/zabbix/zabbix_server.conf' do
   mode '0640'
 end
 
+include_recipe 'zabbix::mysql_setup'
+
 node['zabbix']['services'].each do |svc|
   service svc do
     action [:enable, :start]
   end
 end
-
-include_recipe 'zabbix::mysql_setup'
